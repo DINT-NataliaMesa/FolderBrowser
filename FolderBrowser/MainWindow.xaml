@@ -1,0 +1,31 @@
+﻿<Window x:Class="FolderBrowser.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FolderBrowser"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+
+    <StackPanel>
+        <local:UserControl1 x:Name="DirectoriotrabajoUserControl" Margin="5" Titulo="Directorio de trabajo: "></local:UserControl1>
+        <local:UserControl1 x:Name="DirectoriotemporalUserControl" Margin="5" Titulo="Directorio temporal: "></local:UserControl1>
+        <local:UserControl1 x:Name="DirectoriologUserControl" Margin="5" Titulo="Directorio de log: "></local:UserControl1>
+
+        <TextBlock Margin="0, 30, 0, 0">
+            <Run Text="{Binding ElementName=DirectoriotrabajoUserControl, Path=Titulo}"></Run>
+            <Run Text="{Binding ElementName=DirectoriotrabajoUserControl, Path=Contenido}"></Run>
+        </TextBlock>
+        <TextBlock>
+            <Run Text="{Binding ElementName=DirectoriotemporalUserControl, Path=Titulo}"></Run>
+            <Run Text="{Binding ElementName=DirectoriotemporalUserControl, Path=Contenido}"></Run>
+        </TextBlock>
+
+        <TextBlock>
+            <Run Text="{Binding ElementName=DirectoriologUserControl, Path=Titulo}"></Run>
+            <Run Text="{Binding ElementName=DirectoriologUserControl, Path=Contenido}"></Run>
+        </TextBlock>
+        
+    </StackPanel>
+</Window>
